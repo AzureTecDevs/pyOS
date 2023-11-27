@@ -36,10 +36,10 @@ pkg run : Run package      pkg info: Get package info""")
             z = input("Package Name: ").lower()
             if not os.path.exists(f'pkg/{z}'):
                 os.mkdir(f'pkg/{z}')
-            url = f'https://raw.githubusercontent.com/AzureTecDevs/pyOS/main/pkg/{z}/{z}.py'
+            url = f'https://raw.githubusercontent.com/AzureTecDevs/pyOS/packages/pkg/{z}/{z}.py'
             r = requests.get(url, allow_redirects=True)
             open(f'pkg/{z}/{z}.py', 'wb').write(r.content)
-            url = f'https://raw.githubusercontent.com/AzureTecDevs/pyOS/main/pkg/{z}/about'
+            url = f'https://raw.githubusercontent.com/AzureTecDevs/pyOS/packages/pkg/{z}/about'
             r = requests.get(url, allow_redirects=True)
             open(f'pkg/{z}/about', 'wb').write(r.content)
         elif i.lower() == "pkg run":
