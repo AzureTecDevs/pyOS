@@ -1,13 +1,13 @@
 ---
 name: Bug report
-about: Create a report to help us improve
+about: Report a bug/error
 title: "[BUG]"
 labels: ''
 assignees: ''
 
 ---
 
-## Describe the bug
+## Describe what happened
 A clear and concise description of what the bug is.
 
 ## Output
@@ -16,10 +16,7 @@ The code's output
 ```
 
 ## Expected behavior
-A clear and concise description of what you expected to happen.
-
-## Screenshots
-If applicable, add screenshots to help explain your problem.
+What you expected to happen.
 
 ## System Info
 - OS: (e.g. Fedora)
