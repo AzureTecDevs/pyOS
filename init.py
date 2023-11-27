@@ -22,8 +22,7 @@ while True:
             print("""python  : Run Python            apps   : Open apps
 exit    : Exit pyOS            reset   : Restart current session
 clear   : Clear screen         pkg     : Install package
-pkg run : Run package          pkg info: Get package info
-pkg ins : Install package libs""")
+pkg run : Run package          pkg info: Get package info""")
         elif i.lower() == "reset":
             os.system("clear")
             os.system("python3 init.py")
@@ -55,7 +54,7 @@ pkg ins : Install package libs""")
         elif i.lower() == "pkg info":
             z = input("Package Name: ").lower()
             f = ext.readFile(f'pkg/{z}/about')
-            print(f'Description: {f[0]}\nAuthor: {z[1]}')
+            print(f'Description: {f[0]}\nAuthor: {z[1]}\nVersion: {f[0]}')
         elif i.lower() == "bash":
             os.system('python3 pkg/bash/bash.py')
     except:
