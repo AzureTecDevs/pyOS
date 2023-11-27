@@ -10,12 +10,15 @@ s = t.getSize()
 t.pos(s[0], s[1])
 sleep(2)
 os.system("clear")
-welcome = tc.colored("Welcome to pyOS!", "blue")
-tx = "(c) 2023 AzureTec"
-ver = tc.colored(f"Version 3.12 {tx}", "dark_grey")
-print(f"{welcome}\n{ver}\n\n")
+
+def intro():
+    welcome = tc.colored("Welcome to pyOS!", "blue")
+    tx = "(c) 2023 AzureTec"
+    ver = tc.colored(f"Version 3.12{tx}", "dark_grey")
+    print(f"{welcome}\n{ver}\n\n")
+intro()
 while True:
-    i = input("$ ")
+    i = input("dev $ ")
     try:
         if i.lower() == "python":
             os.system("python3")
@@ -29,7 +32,7 @@ pkg run : Run package      pkg info: Get package info""")
             os.system("python3 init.py")
         elif i.lower() == "clear":
             os.system("clear")
-            print(f"{welcome}\n{ver}\n\n")
+            intro()
         elif i.lower() == "apps":
             print(f"Apps:\nBASH")
         elif i.lower() == "pkg":
