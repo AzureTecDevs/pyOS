@@ -13,8 +13,8 @@ os.system("clear")
 
 def intro():
     welcome = tc.colored("Welcome to pyOS!", "blue")
-    tx = "(c) 2023 AzureTec"
-    ver = tc.colored(f"Version 3.12{tx}", "dark_grey")
+    tx = "(c) 2023 AzureTecDevs"
+    ver = tc.colored(f"Version 1.0.0-dev{tx}", "dark_grey")
     print(f"{welcome}\n{ver}\n\n")
 intro()
 while True:
