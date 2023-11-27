@@ -19,3 +19,7 @@ Get package's info: `pkg info`
 `bash`: Run Linux commands  
 `ide`: Run BPython interpreter  
 Packages are available in the `packages` branch.
+# Code
+```python
+
+```
