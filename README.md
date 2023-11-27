@@ -4,4 +4,4 @@ Run package: `pkg run`
 Get package's info: `pkg info`
 ## Current packages
 `bash`: Run Linux commands  
-`update`: Update pyOS
+`update` (Broken): Update pyOS
