@@ -20,13 +20,17 @@ while True:
         if i.lower() == "python":
             os.system("python3")
         elif i.lower() == "help":
-            print("""python : Run Python       apps   : Open apps
-exit    : Exit pyOS        reset   : Restart current session
-clear   : Clear screen     pkg     : Install package
-pkg run : Run package      pkg info: Get package info""")
+            print("""python  : Run Python            apps   : Open apps
+exit    : Exit pyOS            reset   : Restart current session
+clear   : Clear screen         pkg     : Install package
+pkg run : Run package          pkg info: Get package info
+pkg ins : Install package libs""")
         elif i.lower() == "reset":
             os.system("clear")
             os.system("python3 init.py")
+        elif i.lower() == "reset":
+            z = input("Package Name: ")
+            os.system(f"python3 pkg/{z}/install/{p}.py")
         elif i.lower() == "clear":
             os.system("clear")
             print(f"{welcome}\n{ver}\n\n")
