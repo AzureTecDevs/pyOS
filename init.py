@@ -6,14 +6,12 @@ import requests
 import ext
 import platform
 os.system("clear")
-print("_")
-s = t.getSize()
-t.pos(s[0], s[1])
+t.write("█")
 sleep(2)
 os.system("clear")
 welcome = tc.colored("Welcome to pyOS!", "blue")
-tx = "(c) 2023 AzureTec"
-ver = tc.colored(f"Version 3.12 {tx}", "dark_grey")
+tx = "(c) 2023 AzureTecDevs"
+ver = tc.colored(f"Version 1.0.0 {tx}", "dark_grey")
 print(f"{welcome}\n{ver}\n\n")
 while True:
     i = input("$ ")
@@ -32,7 +30,7 @@ pkg ins : Install package libs""")
         elif i.lower() == "pkg ins":
             z = input("Package Name: ")
             p = platform.linux_distribution()
-            if p in ("fedora","debian"):
+            if p.lower() in ("fedora","debian"):
                 os.system(f"python3 pkg/{z}/install/deb.py")
             else:
                 os.system(f"python3 pkg/{z}/install/reg.py")
