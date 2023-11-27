@@ -4,6 +4,7 @@ import term as t
 from time import sleep
 import requests
 import ext
+import platform
 os.system("clear")
 print("_")
 s = t.getSize()
@@ -28,9 +29,13 @@ pkg ins : Install package libs""")
         elif i.lower() == "reset":
             os.system("clear")
             os.system("python3 init.py")
-        elif i.lower() == "reset":
+        elif i.lower() == "pkg ins":
             z = input("Package Name: ")
-            os.system(f"python3 pkg/{z}/install/{p}.py")
+            p = platform.linux_distribution()
+            if p in ("fedora","debian"):
+                os.system(f"python3 pkg/{z}/install/deb.py")
+            else:
+                os.system(f"python3 pkg/{z}/install/reg.py")
         elif i.lower() == "clear":
             os.system("clear")
             print(f"{welcome}\n{ver}\n\n")
