@@ -1,6 +1,7 @@
 import os
-i = input("GUI Mode: tkinter, qt")
+i = input("GUI Mode: tkinter, qt\n> ")
+c = os.getcwd()
 if i.lower() == "qt":
-    os.system("python3 pkg/gui/qt.py")
+    os.system(f"python3 {c}/pkg/gui/qt.py")
 else:
-    os.system("python3 pkg/gui/tk.py")
+    os.system(f"python3 {c}/pkg/gui/tk.py")
