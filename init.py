@@ -6,7 +6,7 @@ import requests
 import ext
 import platform
 os.system("clear")
-t.write("█")
+#t.write("█")
 sleep(2)
 os.system("clear")
 welcome = tc.colored("Welcome to pyOS!", "blue")
@@ -50,7 +50,7 @@ pkg run : Run package          pkg info: Get package info""")
             open(f'pkg/{z}/about', 'wb').write(r.content)
             f = ext.readFile(f'pkg/{z}/about')[3]
             if not f == "":
-                t = f.split(", ")
+                t = f.split(",")
                 for n in t:
                     url = f'https://raw.githubusercontent.com/AzureTecDevs/pyOS/packages/pkg/{z}/{n}.py'
                     r = requests.get(url, allow_redirects=True)
