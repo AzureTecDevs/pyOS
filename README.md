@@ -74,6 +74,13 @@ pkg run : Run package          pkg info: Get package info""")
             url = f'https://raw.githubusercontent.com/AzureTecDevs/pyOS/packages/pkg/{z}/about'
             r = requests.get(url, allow_redirects=True)
             open(f'pkg/{z}/about', 'wb').write(r.content)
+            f = ext.readFile(f'pkg/{z}/about')[3]
+            if not f == "":
+                t = f.split(", ")
+                for n in t:
+                    url = f'https://raw.githubusercontent.com/AzureTecDevs/pyOS/packages/pkg/{z}/{n}.py'
+                    r = requests.get(url, allow_redirects=True)
+                    open(f'pkg/{z}/{n}.py', 'wb').write(r.content)
         elif i.lower() == "pkg run":
             z = input("Package Name: ").lower()
             os.system(f'python3 pkg/{z}/{z}.py')
